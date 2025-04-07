@@ -1,7 +1,6 @@
 "use client";
 
 import postLinks from "@/services/postLinks";
-import axios from "axios";
 import React, { useState } from "react";
 
 const Form = () => {
