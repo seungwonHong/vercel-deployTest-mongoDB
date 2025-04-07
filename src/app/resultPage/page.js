@@ -4,7 +4,8 @@ import ShortLink from "@/lib/db/models/ShortLink";
 
 export default async function resultPage() {
   await dbConnect();
-  const shortLinks = await ShortLink.find();
+  const rawLinks = await ShortLink.find().lean();
+  const shortLinks = JSON.parse(JSON.stringify(rawLinks));
   console.log(shortLinks);
 
   return (
