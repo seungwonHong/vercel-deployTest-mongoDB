@@ -1,0 +1,28 @@
+POST http://localhost:3000/api/short-links
+Content-Type: application/json
+
+{
+"title": "codeit2",
+"url": "https://codeit.kr"
+}
+###
+GET  http://localhost:3000/api/short-links
+
+###
+GET http://localhost:3000/api/qrc/67efde575c5d0f9da0e3f105
+###
+POST  http://localhost:3000/api/qrcodes
+###
+PATCH  http://localhost:3000/api/qrcodes
+###
+GET http://localhost:3000/api/qrc/abc
+###
+PATCH http://localhost:3000/api/qrc/67efde575c5d0f9da0e3f105
+Content-Type: application/json
+
+{
+  "title": "codeit-edit",
+  "url": "https://en.wikipedia.org/wiki/Next.js"
+}
+###
+DELETE http://localhost:3000/api/qrc/67efde575c5d0f9da0e3f105
